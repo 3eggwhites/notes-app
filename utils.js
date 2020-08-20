@@ -1,3 +1,6 @@
 const name = 'Ayan';
 
-module.exports = name;
+
+const add = (a,b) => a+b;
+
+module.exports = add;
