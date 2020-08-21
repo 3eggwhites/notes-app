@@ -1,5 +1,4 @@
-const name = 'Ayan';
-
+// const name = 'Ayan';
 
 const add = (a,b) => a+b;
 
