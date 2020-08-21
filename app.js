@@ -1,10 +1,3 @@
-const validator = require('validator');
-const addFunction = require('./utils.js');
-const getNotes = require('./notes');
+const chalk = require('chalk');
 
-const sum = addFunction(4,-2);
-console.log(sum);
-
-console.log(getNotes());
-
-console.log(validator.isEmail('abcdefault.com'));
+console.log(chalk.inverse.bold.red('Success!'));
