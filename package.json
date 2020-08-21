@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/not-john-wick/NotesApp/issues"
   },
-  "homepage": "https://github.com/not-john-wick/NotesApp#readme"
+  "homepage": "https://github.com/not-john-wick/NotesApp#readme",
+  "dependencies": {
+    "validator": "^10.8.0"
+  }
 }
