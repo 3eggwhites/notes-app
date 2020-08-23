@@ -18,9 +18,9 @@ const addNotes = (title, body) => {
             body: body
         });
         saveNotes(notes);
-        console.log(chalk.green('New note added'));
+        console.log(chalk.green.inverse('New note added'));
     } else {
-        console.log(chalk.red('Title already taken.'));
+        console.log(chalk.red.inverse('Title already taken.'));
     }
 }
 
@@ -31,9 +31,9 @@ const removeNotes = (title) => {
     });
     if (notes.length > filteredOutNotes.length) {
         saveNotes(filteredOutNotes);
-        console.log(chalk.green('Note with title '+title+' removed'));
+        console.log(chalk.green.inverse('Note with title '+title+' removed'));
     } else {
-        console.log(chalk.red('No note found with title '+title+' to remove'));
+        console.log(chalk.red.inverse('No note found with title '+title+' to remove'));
     }
 }
 
