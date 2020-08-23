@@ -20,6 +20,10 @@ const addNotes = (title, body) => {
     }
 }
 
+const removeNotes = (title) => {
+    console.log('Removed note' + title);
+}
+
 const filterNotesOnTitle = (notes, title) => {
     const filteredNotes = notes.filter((note) => {
         return title === note.title;
@@ -43,5 +47,6 @@ const loadNotes = () => {
 
 module.exports = {
     getNotes: getNotes,
-    addNotes: addNotes
+    addNotes: addNotes,
+    removeNotes: removeNotes
 };
