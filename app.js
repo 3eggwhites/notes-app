@@ -1,12 +1,43 @@
 const chalk = require('chalk');
-const notes = require('./notes.js')
+const yargs = require('yargs');
+const notes = require('./notes.js');
 
-const command = process.argv[2];
-
-if ('add' === command) {
-    console.log('Adding note');
-} else if ('remove' == command) {
-    console.log('Removing note');
-}
-
-console.log(process.argv);
+//create add command
+yargs.command({
+    command: 'add',
+    describe: 'Add a new Note',
+    builder: { // to specify additional options for this command
+        title: {
+            describe: 'Title for a note',
+            demandOption: true, // to mark an option as required
+            type: 'string' //for specifying type of a option
+        },
+        body: {
+            describe: 'Body of the note',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: (argv) => {
+        console.log('Title:', argv.title);
+        console.log('Body:', argv.body);
+    }
+}).command({ //create remove command
+    command: 'remove',
+    describe: 'Remove a Note',
+    handler: () => {
+        console.log('Removing a Note');
+    }
+}).command({ //create list command
+    command: 'list',
+    describe: 'List all the notes',
+    handler: () => {
+        console.log('Listing all notes');
+    }
+}).command({ //create read command
+    command: 'read',
+    describe: 'Read a Note',
+    handler: () => {
+        console.log('For reading a Note');
+    }
+}).argv
