@@ -7,18 +7,28 @@ const getNotes = () => {
 
 const addNotes = (title, body) => {
     const notes = loadNotes();
-    notes.push({
-        title: title,
-        body: body
-    });
-    console.log('New note added');
+    const duplicateNotes = filterNotesOnTitle(notes,title);
+    if (duplicateNotes.length === 0) {
+        notes.push({
+            title: title,
+            body: body
+        });
+        saveNotes(notes);
+        console.log('New note added');
+    } else {
+        console.log('Title already taken.')
+    }
 }
 
 const filterNotesOnTitle = (notes, title) => {
-    notes.filter((note) => {
+    const filteredNotes = notes.filter((note) => {
         return title === note.title;
     });
     return filteredNotes;
+}
+
+const saveNotes = (notes) => {
+    fs.writeFileSync('notes.json', JSON.stringify(notes))
 }
 
 const loadNotes = () => {
@@ -31,4 +41,7 @@ const loadNotes = () => {
     }
 }
 
-module.exports = getNotes;
+module.exports = {
+    getNotes: getNotes,
+    addNotes: addNotes
+};
