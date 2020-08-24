@@ -9,10 +9,8 @@ const getNotes = () => {
 
 const addNotes = (title, body) => {
     const notes = loadNotes();
-    const filteredNotes = notes.filter((note) => {
-        return title === note.title;
-    });
-    if (filteredNotes.length === 0) {
+    const filteredNote = notes.find((note) => title === note.title);
+    if (!filteredNote) {
         notes.push({
             title: title,
             body: body
@@ -63,9 +61,24 @@ const listNotes = () => {
     }
 }
 
+const readNotes = (title) => {
+    const notes = loadNotes();
+    if (notes.length === 0) {
+        console.log(chalk.red.inverse('No notes found'));
+    } else {
+        const filteredNote = notes.find((note) => title === note.title);
+        if (filteredNote) {
+            console.log(JSON.stringify(filteredNote));
+        } else  {
+            console.log(chalk.red.inverse('Note with title '+title+' not found'));
+        }
+    }
+}
+
 module.exports = {
     getNotes: getNotes,
     addNotes: addNotes,
     removeNotes: removeNotes,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNotes: readNotes
 };
