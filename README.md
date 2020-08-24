@@ -4,7 +4,6 @@ It is simple note taking app built on Node.js which taken command line arguments
 Create, Read, Delete and List(Titles only)
 Save notes in json format on filesystem
 To run the app please follow the below steps:
-<ul></ul>
 ## Packages Used
 While developing the application I have used two npm packages. they are listed below:
 - [chalk](https://www.npmjs.com/package/chalk)
