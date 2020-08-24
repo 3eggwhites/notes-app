@@ -7,7 +7,7 @@ To run the app please follow the below steps:
 <ul></ul>
 ## Packages Used
 While developing the application I have used two npm packages. they are listed below:
-* <a href="https://www.npmjs.com/package/chalk">chalk</a>
-* <a href="https://www.npmjs.com/package/yargs">yargs</a>
+* [chalk] (https://www.npmjs.com/package/chalk)
+* [yargs] (https://www.npmjs.com/package/yargs)
 # Credits
 This note app built based on the Node.js course offered by Andrew Mead on Udemy 
