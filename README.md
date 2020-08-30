@@ -16,4 +16,4 @@ While developing the application I have used the below two npm packages and one 
 - [yargs](https://www.npmjs.com/package/yargs)
 - [fs](https://nodejs.org/api/fs.html)
 # Credits
-This note taking app is built based on the Node.js course offered by Andrew Mead on Udemy 
+This note taking app was built based on the Node.js course offered by Andrew Mead on Udemy 
