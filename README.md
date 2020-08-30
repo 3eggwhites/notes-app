@@ -3,7 +3,7 @@ It is simple note taking app built on Node.js which taken command line arguments
 ## App Function
 Create, Read, Delete and List(Titles only)
 Save notes in json format on filesystem.  
-To run the app please follow the below steps:
+## How to run app locally
 - Perform a `git clone`
 - Navigate to the directory and do a `npm install` to install all the required node modules
 - To add a note use the command `node app.js add --title='Note 1' --body='Body1'` this command will add a new note. Notes are saved in the same directory in notes.json file
